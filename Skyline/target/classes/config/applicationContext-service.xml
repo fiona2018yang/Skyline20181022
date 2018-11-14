@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.rs.skyline.**.service"/>
+    <context:property-placeholder location="classpath:config/config.properties" />
+
+    <!--<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="50"></property>
+        <property name="minEvictableIdleTimeMillis" value="${redis.minEvictableIdleTimeMillis}"></property>
+        <property name="numTestsPerEvictionRun" value="${redis.numTestsPerEvictionRun}"></property>
+        <property name="timeBetweenEvictionRunsMillis" value="${redis.timeBetweenEvictionRunsMillis}"></property>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"></property>
+        <property name="maxTotal" value="${redis.maxTotal}"></property>
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1" value="${redis.addr}"/>
+        <constructor-arg index="2" value="${redis.port}" type="int"/>
+        <constructor-arg index="3" value="${redis.timeout}" type="int"/>
+        <constructor-arg index="4" value="${redis.auth}" />
+    </bean>
+    <bean id="shardedJedis" factory-bean="jedisPool" factory-method="getResource" />-->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool"></bean>
+</beans>

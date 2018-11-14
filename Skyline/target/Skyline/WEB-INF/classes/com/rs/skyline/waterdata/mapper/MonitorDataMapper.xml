@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rs.skyline.waterdata.mapper.MonitorDataMapper">
+<!--查询-->
+    <select id="selectMonitorData" resultType="com.rs.skyline.waterdata.entity.MonitorData">
+       SELECT tagname,tagvalue,time, number FROM monitordata WHERE number='5008';
+    </select>
+
+    <select id="getMonitorData" resultType="HashMap">
+       SELECT tagname,tagvalue,time, number FROM monitordata WHERE number='5008';
+    </select>
+
+</mapper>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Skyline:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Skyline.war">
+      <element id="artifact" artifact-name="Skyline:war exploded" />
+    </root>
+  </artifact>
+</component>
